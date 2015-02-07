@@ -1,0 +1,73 @@
+﻿body {
+}
+
+p.MainText{
+    text-transform: capitalize;
+    color : red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #b0e0e6;
+    
+}
+
+h3.title{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    color: green;
+    text-align: center;
+}
+
+ul.list{
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+
+.imgFloat{
+    float: right;
+    height : 200px;
+    width : 300px;
+}
+
+img{
+    height : 200px;
+    width : 300px;
+}
+img.opacity{
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+.webResponsive{
+    float: left;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid green;
+}
+
+.clear{
+    clear:both;
+}
+
+img.rot3D{
+    -webkit-transform: rotateX(120deg); 
+}
+
+div.animation{     
+    width:600px;  
+     position: relative;
+    -webkit-animation: myfirst 5s; 
+    animation: myfirst 5s;
+}
+
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:400px; top:0px;}
+    50%  {background:blue; left:400px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}

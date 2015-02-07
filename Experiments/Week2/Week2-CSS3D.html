@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Experiments</title>
+    <link rel="stylesheet" type="text/css" href="CssStyle.css" />
+</head>
+<body>
+
+    <header>
+        Here in CSS experiments HTML pages contains only the HTML tags all the CSS work is done in other 
+        stylesheet common for all 5 experiments.
+
+    </header>
+    <hr />
+
+    <h3 class="title">Here in this experiment 3D tranformations and Animation are done on the image
+        using CSS.
+    </h3>
+    <hr />
+    <br />
+    <p>Description : Here image is rotated by 120 degrees.</p>
+    <img src="../Images/flower1.jpg" class="rot3D" /><hr />
+    <p>Description:  Here as image changes it's position consequently the background color changes.</p>
+    <div class="animation">
+        <img src="../Images/flower2.jpg" /><hr />
+    </div>
+
+    <p> Code Snippet : div.animation{     
+    width:600px;  
+     position: relative;
+    -webkit-animation: myfirst 5s; 
+    animation: myfirst 5s;
+}
+
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:400px; top:0px;}
+    50%  {background:blue; left:400px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}</p>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week2/Week2-CSS3D.html" target="_blank">View Source</a>
+    <h3>CSS Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week2/CssStyle.css" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+</body>
+</html>
