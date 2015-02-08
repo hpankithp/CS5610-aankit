@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="JSExperiment.js"></script>
+    <title>jQuery Experiments</title>
+    <link rel="stylesheet" type="text/css" href="../Week2/CssStyle.css" />
+</head>
+<body>
+    <header>
+        Here in jQuery experiments HTML pages contains only the HTML tags. All the DOM manipulation is done using the jQuery.
+    </header>
+    <hr />
+
+    <h3>Description : Here in this experiment image properties are displayed using jQuery.
+    </h3>
+    <hr />
+
+    <img src="../Images/flower1.jpg" class="showInfo" /><br />
+
+    <p class="appendText">Click on Image to get the dimesnion information</p>
+    <hr />
+    <button id="refresh">Refresh</button>
+    <hr />
+
+    <p> Code Snippet :  $(".showInfo").click(function () {
+        var data = "";
+        data += "Width of image: "  + $(".showInfo").width() + "</br>";
+        data += "Height of image: " + $(".showInfo").height();
+        $(".appendText").html(data);
+    });</p>
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/jQueryDisplayImageInfo.html" target="_blank">View Source</a>
+    <h3>jQuery Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/JSExperiment.js" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+
+
+    <hr />
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="JSExperiment.js"></script>
+    <title>jQuery Experiments</title>
+    <link rel="stylesheet" type="text/css" href="../Week2/CssStyle.css" />
+</head>
+<body>
+    <header>
+        Here in jQuery experiments HTML pages contains only the HTML tags. All the DOM manipulation is done using the jQuery.
+    </header>
+    <hr />
+
+    <h3>Description : Here in this experiment image properties are changes using animation method of jQuery.
+    </h3>
+    <hr />
+
+
+    <button id="animate">Click here to start animation </button>
+    <br />
+    <hr />
+
+
+    <img src="../Images/flower1.jpg" class="animateImage" /><br />
+    <img src="../Images/flower2.jpg" class="animateImage" /><br />
+
+    <p> Code Snippet : $("#animate").click(function () {
+        $(".animateImage").animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
+    });</p>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/jQueryAnimation.html" target="_blank">View Source</a>
+    <h3>jQuery Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/JSExperiment.js" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+</body>
+</html>

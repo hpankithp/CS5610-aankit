@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="JSExperiment.js"></script>
+    <title>jQuery Experiments</title>
+</head>
+<body>
+    <header>
+        Here in jQuery experiments HTML pages contains only the HTML tags. All the DOM manipulation is done using the jQuery.
+    </header>
+    <hr />
+
+    <h3> Description : Here in this experiment text is hidden using jQuery.
+    </h3>
+    <hr />
+
+    <p class="hideTest">Representational State Transfer (REST) is a software architecture style consisting of guidelines and best practices for creating scalable web services.[1][2] REST is a coordinated set of constraints applied to the design of components in a distributed hypermedia system that can lead to a more performant and maintainable architecture.[3]</p>
+
+    <p class="hideTest">The REST architectural style was developed by W3C Technical Architecture Group (TAG) in parallel with HTTP 1.1, based on the existing design of HTTP 1.0.[4] The World Wide Web represents the largest implementation of a system conforming to the REST architectural style</p>
+
+    <h2>If you click on any of the above paragraph it will hide.</h2>
+    <button id="show">Show</button>
+
+    <p> Code Snippet :  $("p.hideTest").click(function () {
+        $(this).hide();        
+    });
+
+          $("#show").click(function () {
+        $("p").show();
+    });
+    </p>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/jQueryBasic.html" target="_blank">View Source</a>
+    <h3>jQuery Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week3/JSExperiment.js" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+
+</body>
+</html>
