@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <script src="AngularJSExperiment.js"></script>
+    <title>AngularJS Experiments</title>
+</head>
+<body ng-app="DataBinding">
+    <header>
+        Here in AngularJS experiments HTML pages contains only the HTML tags.
+    </header>
+    <hr />
+
+    <h3>Description : Here in this experiment text box is used.
+    </h3>
+    <hr />
+    <div ng-controller="DataBindingController">
+        <p>AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers and corporations to address many of the challenges encountered in developing single-page applications. Its goal is to simplify both development and testing of such applications by providing a framework for client-side model–view–controller (MVC) architecture, along with components commonly used in rich internet applications.</p>
+        <h1>{{data}}
+        </h1>
+        <hr />
+
+
+        <p>
+            Name:
+            <input type="text" ng-model="name" value="Type Here">
+        </p>
+        <p ng-bind="name"></p>
+        <hr />
+        <form>
+            First Name:<br>
+            <input type="text" ng-model="modifiedvalue.firstName"><br>
+            Last Name:<br>
+            <input type="text" ng-model="modifiedvalue.lastName">
+            <br>
+            <br>
+            <button ng-click="reset()">RESET</button>
+        </form>
+
+        <p>{{modifiedvalue}}</p>
+        <p>{{actualValue}}</p>
+        <hr />
+
+    </div>
+    <div ng-init="val=true">
+        <p>
+            <button ng-disabled="val">Click Me!</button>
+        </p>
+        <p>
+            <input type="checkbox" ng-model="val" />Button
+        </p>
+        <p> Here the value gets changed</p>
+        <p>
+            {{ val }}
+        </p>
+
+
+    </div>
+
+
+    <p>Description : The ng-disabled directive binds AngularJS application data to the disabled attribute of HTML elements.</p>
+
+
+    <p>
+        Code Snippet :  &lt;div ng-init="val=true"&gt;
+        
+             &lt;button ng-disabled="val"&gt; Click Me!  &lt;/button&gt;
+        
+        
+             &lt;input type="checkbox" ng-model="val" /&gt;Button
+        
+       
+       
+            {{ val }}
+      
+
+
+    </div>
+    </p>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week4/angularJSng_directive.html" target="_blank">View Source</a>
+    <h3>jQuery Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week4/AngularJSExperiment.js" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+
+</body>
+</html>

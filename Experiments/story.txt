@@ -2,3 +2,4 @@
 ../story/index.htm?../Experiments/Week1/		WEEK 1 - HTML Experiments
 ../story/index.htm?../Experiments/Week2/		WEEK 2 - CSS Experiments
 ../story/index.htm?../Experiments/Week3/		WEEK 3 - jQuery Experiments
+../story/index.htm?../Experiments/Week4/		WEEK 4 - angularJS Experiments

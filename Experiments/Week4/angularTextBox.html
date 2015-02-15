@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    
+    <script src="AngularJSExperiment.js"></script>
+    <title>AngularJS Experiments</title>
+</head>
+<body ng-app="DataBinding">
+    <header>
+        Here in AngularJS experiments HTML pages contains only the HTML tags.
+    </header>
+    <hr />
+
+    <h3> Description : Here in this experiment text box is used.
+    </h3>
+    <hr />
+    <div ng-controller="DataBindingController">
+    <p >AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers and corporations to address many of the challenges encountered in developing single-page applications. Its goal is to simplify both development and testing of such applications by providing a framework for client-side model–view–controller (MVC) architecture, along with components commonly used in rich internet applications.</p>
+      <h1>
+        {{data}}
+            </h1>
+        <hr />
+        <p>Name: <input type="text" ng-model="name" value="Type Here"></p>
+        <p ng-bind="name"></p>
+        </div>
+
+
+    <p> Code Snippet :   &lt;p&gt; Name: &lt;input type="text" ng-model="name" value="Type Here"> &lt;p&gt;
+        &lt;p ng-bind="name"&gt;  &lt;/p&gt;
+    </p>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week4/angularTextBox.html" target="_blank">View Source</a>
+    <h3>jQuery Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week4/AngularJSExperiment.js" target="_blank">View Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+
+</body>
+</html>

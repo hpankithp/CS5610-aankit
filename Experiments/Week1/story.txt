@@ -1,4 +1,8 @@
 ﻿../../story/whatisnext.htm?../Experiments/Week1/   What is Next?
-Week1-HTML.html       HTML 5 Experiments
+Week1-HTML.html       HTML 5 Basic Experiments
 Week1-HTMLBasics.html		HTML Basics
+Week1-HTML5-Image.html		HTML 5 Image
+Week1-HTML5-Mark.html		HTML 5 Mark
+Week1-HTML5-Block.html		HTML 5 Block Quotes
+
 
