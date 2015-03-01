@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="MovieJS.js"></script>
+</head>
+<body ng-app="MoviesApp">
+    <div ng-controller="MoviesController" class="container">
+        <h1>Simple Movie Library</h1>
+        <div class="input-group">
+            <input type="text" ng-model="searchByTitle" class="form-control" placeholder="Search for..." />
+            <span class="input-group-btn">
+                <button ng-click="searchMovies()" class="btn btn-default" type="button">Go!</button>
+            </span>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                    <th>Plot</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <th>
+                        <input ng-model="movie.title" class="form-control" /></th>
+                    <th>
+                        <input ng-model="movie.year" class="form-control" /></th>
+                    <th>
+                        <input ng-model="movie.rating" class="form-control" /></th>
+                    <th>
+                        <input ng-model="movie.plot" class="form-control" /></th>
+                    <th>
+                        <button ng-click="updateMovie()" class="btn btn-primary">
+                            <scan class="glyphicon glyphicon-ok"></scan>
+                        </button>
+                        <button ng-click="addMovie()" class="btn btn-success">
+                            <scan class="glyphicon glyphicon-plus"></scan>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.year}}</td>
+                    <td>{{movie.rating}}</td>
+                    <td>{{movie.plot}}</td>
+                    <td>
+                        <button ng-click="selectMovie(movie)" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button ng-click="removeMovie(movie)" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+
+        <h4>Description : </h4>
+        <p>
+            Here the Movie Database can be manipulated using Angular JS.
+        </p>
+        <hr />
+
+        <h4>Code Snippet</h4>
+        <h4>Angular Js</h4>
+        <pre>
+            app.controller("MoviesController", function ($scope, $http) {
+                $scope.searchMovies = function () {
+                    var title = $scope.searchByTitle;
+                    $http.jsonp("http://www.myapifilms.com/imdb?title=" + title + "&format=JSONP&aka=0&business=0&seasons=0&seasonYear=0&technical=0
+                            &filter=N&exactFilter=0&limit=10&lang=en-us&actors=N&biography=0&trailer=0&uniqueName=0&filmography=0&bornDied=0&starSign=0
+                            &actorActress=0&actorTrivia=0&movieTrivia=0&awards=0&moviePhotos=N&movieVideos=N&callback=JSON_CALLBACK")
+                         .success(function (response) {
+                             $scope.movies = response;
+                         })
+                };
+                $scope.removeMovie = function (movie) {
+                    var index = $scope.movies.indexOf(movie);
+                    $scope.movies.splice(index, 1);
+                };
+                $scope.addMovie = function () {
+                    var newMovie = {
+                        title: $scope.movie.title,
+                        year: $scope.movie.year,
+                        rating: $scope.movie.rating,
+                        plot: $scope.movie.plot,
+                    };
+                    $scope.movies.push(newMovie);
+                };
+                $scope.selectMovie = function (movie) {
+                    $scope.movie = movie;
+                }
+            })            
+        </pre>
+        <hr />
+
+        <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week6/MovieLibrary.html" target="_blank">View Source</a>
+    <hr />
+        <a href="../../fileview/Default.aspx?~/Experiments/Week6/MovieJS.js" target="_blank">JavaScript</a>
+        <hr />
+        <h4>References</h4>
+        <a href="https://www.youtube.com/user/jannunzi" target="_blank">Prof Jose's Video</a>
+    </div>
+</body>
+</html>

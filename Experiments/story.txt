@@ -4,3 +4,4 @@
 ../story/index.htm?../Experiments/Week3/		WEEK 3 - jQuery Experiments
 ../story/index.htm?../Experiments/Week4/		WEEK 4 - angularJS Experiments
 ../story/index.htm?../Experiments/Week5/		WEEK 5 - BootStrap,JqueryUI,Ajax
+../story/index.htm?../Experiments/Week6/		WEEK 6 - Google API,BootStrap,Angular
