@@ -1,0 +1,11 @@
+﻿body {
+}
+#ball {
+    position: relative;
+    overflow: hidden;
+    background-color: Transparent;
+    color: greenyellow;
+    font-size: 40pt;
+    top: 200px;
+    left: 225px;
+}

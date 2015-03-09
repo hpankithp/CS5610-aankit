@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>This is Node JS Static JSON Render</h1>
+    <p>Click <a href="http://nodejs-ankitagrawal.rhcloud.com/developer/0">here</a> to go to the Node JS Page</p>
+    <p>Image Screenshot from the Node JS page.</p>
+    <img src="JSON_Index.JPG" />
+    <p>
+        Description : Here Static JSON Object is displayed at particular Index.
+    </p>
+    <p>Code Snippet :</p>
+    <code>var express = require('express')
+var app = express()
+
+var developer = [
+ {
+     Name: "Ankit", LName: "Agrawal", Specialization: "Java", city: "Boston"
+ },
+ { firstName: "Bob", lastName: "Marley",  specialization: "Rock", city: "New York" },
+]
+
+app.get("/developer", function (req, res) { // get function to get a response from the server<br />
+        res.json(developer);// send the whole developer array.<br />
+        });
+
+        app.get("/developer/:index", function (req, res) { // to access a particular developer<br />
+        var idx = req.params['index']; //. notation (req.params.index), fetch the index from the url<br />
+        res.json(developer[idx]); // send that particular array using the index.<br />
+        });
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+
+app.listen(port, ip);
+    </code>
+    <hr />
+
+    <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/NodeJSStaticResponseIndexing.html" target="_blank">View Source</a><br />
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/server.js" target="_blank">Node JS Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="https://www.youtube.com/watch?v=Lnd_uSEpCdo" target="_blank">Prof. Jose Video Page</a>
+    <hr />
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="Ball.js"></script>    
+    <link rel="stylesheet" type="text/css" href="BOuncingBall.css" />
+
+    <title>jQuery Experiments</title>
+</head>
+<body>
+    <header>
+        Here in jQuery experiments HTML pages contains only the HTML tags. All the DOM manipulation is done using the jQuery.
+    </header>
+    <hr />
+    <div id="ball">
+            O
+        </div>
+    <br /><br /><br /><br /><br /><br /><br />
+    <h3>Description : Here in this experiment Bouncing Ball is implemented using Jquery.
+    </h3>
+    <hr />
+
+
+
+
+    <code>Code Snippet : function ballUp() {
+    $("#ball").animate({ top: "1px" }, "slow", "swing", ballDown);
+}
+
+
+function ballDown() {
+    $("#ball").animate({ top: "446px" }, "slow", "swing", ballUp);
+}
+
+
+$(document).ready(function () {
+    ballUp();
+});
+    </code>
+
+    <hr />
+    
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/jQueryBouncing.html" target="_blank">View Source</a><br />
+   
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/Ball.js" target="_blank">View JS Source</a><br />
+    
+     <a href="../../fileview/Default.aspx?~/Experiments/Week7/BOuncingBall.css" target="_blank">View CSS Source</a>
+     <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+
+
+</body>
+</html>

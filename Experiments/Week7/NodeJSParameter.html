@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>This is Node JS Parameter Passing Experiment</h1>
+    <p>Click <a href="http://nodejs-ankitagrawal.rhcloud.com/paramSend/Ankit_Agrawal">here</a> to go to the Node JS Page</p>
+    <p>Image Screenshot from the Node JS page.</p>
+    <img src="ParamPassing.JPG" />
+    <p>
+        Description : Here Paramter passed in the URL is displayed as the value.
+    </p>
+    <p>Code Snippet :</p>
+    <code>var express = require('express')
+var app = express()
+
+app.get('/paramSend/:param', function (req, res) {
+    var paramInput = req.params.param;
+    res.send(paramInput);
+});
+
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+
+app.listen(port, ip);
+    </code>
+    <hr />
+
+    <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/NodeJSParameter.html" target="_blank">View Source</a><br />
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/server.js" target="_blank">Node JS Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="https://www.youtube.com/watch?v=Lnd_uSEpCdo" target="_blank">Prof. Jose Video Page</a>
+    <hr />
+
+</body>
+</html>

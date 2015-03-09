@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>This is Node JS Basic Experiment</h1>
+    <p>Click <a href="http://nodejs-ankitagrawal.rhcloud.com/Hello">here</a> to go to the Node JS Page</p>
+    <p>Image Screenshot from the Node JS page.</p>
+    <img src="Assign1.JPG" />
+    <p>
+        Description : Node.js is an open source, cross-platform runtime environment for server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, and IBM i.
+
+Node.js provides an event-driven architecture and a non-blocking I/O API that optimizes an application's throughput and scalability. These technologies are commonly used for real-time web applications.
+    </p>
+    <p>Code Snippet :</p>
+    <code>var express = require('express')
+var app = express()
+
+app.get('/Hello', function (req, res) {
+    res.send('Hello World! This is Node JS')
+})
+
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+
+app.listen(port, ip);
+    </code>
+    <hr />
+
+    <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/NodeJSBasic.html" target="_blank">View Source</a><br />
+    <a href="../../fileview/Default.aspx?~/Experiments/Week7/server.js" target="_blank">Node JS Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="https://www.youtube.com/watch?v=Lnd_uSEpCdo" target="_blank">Prof. Jose Video Page</a>
+    <hr />
+
+</body>
+</html>

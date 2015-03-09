@@ -1,16 +1,21 @@
 ﻿var app = angular.module("Demo", ['ngRoute']);
 
+app.controller("controller1", function ($scope) {
+    console.log("Hello");
+
+});
+
 app.config(['$routeProvider',
   function ($routeProvider) {
       $routeProvider.
         when('/home', {
-            templateUrl: '/home.html',
+            templateUrl: './home.html',
         }).
         when('/about', {
-            templateUrl: '/about.htm',
+            templateUrl: './about.html',
         }).
         when('/contact', {
-            templateUrl: '/contact.htm',
+            templateUrl: './contact.html',
         }).
         otherwise({
             redirectTo: '/home'
