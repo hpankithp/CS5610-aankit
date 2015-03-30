@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="JSExperiment.js"></script>
+    <title>Jquery Chaining and Sliding</title>
+
+</head>
+<body>
+
+    <header>This page demonstrates the use of Jquery Chaining and Sliding </header>
+    <hr />
+   
+    <p id="p1">Magic of Jquery!</p>
+
+<button>Click me</button>
+
+    <p> Code Snippet :</p>
+    <code> 
+        $(document).ready(function () {
+
+    $("button").click(function () {
+        $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+    });
+        < p id="p1">Magic of Jquery!< /p>
+           
+
+    </code>
+    <hr />
+    <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week9/jQuerySliding.html" target="_blank">View Source</a> <br /> 
+    <a href="../../fileview/Default.aspx?~/Experiments/Week9/JSExperiment.js" target="_blank">Script File</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://www.w3schools.com" target="_blank">W3 Schools</a>
+    <hr />
+    <footer>Footer Tag : Copyright 2015</footer>
+</body>
+</html>
