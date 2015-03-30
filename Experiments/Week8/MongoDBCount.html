@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>This is MongoDB Count Experiment</h1>    
+     
+    <p>
+        Description : MongoDB (from humongous) is one of many cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.
+    </p>
+    <p> Here in this experiment total number of records in the mongo db is being displayed</p>
+    <p>Image Screenshot from the web.</p>   
+    
+    <img src="../Week8/MongoCount.JPG"/>
+    
+     <hr />    
+    <p> Code Snippet :</p>
+    
+
+
+    <code>
+      var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/trial_data');
+var express = require('express');
+var app = express();
+
+var DeveloperSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,    
+}, { collection: "form_final" });
+var form_final = mongoose.model("form_final", DeveloperSchema);
+
+app.get('/form_final', function (req, res) {
+    form_final.find(function (err, data) {
+        res.json(data);
+    });
+});
+
+app.get('/form_final/:id', function (req, res) {
+    form_final.findById(req.params.id, function (err, data) {
+        res.json(data);
+        console.log(data);
+    });
+});
+
+
+app.get('/countNoOfRec', function (req, res) {
+    form_final.count(function (err, data) {
+        res.json(data);
+    });
+});
+app.listen(3000);
+
+
+
+
+    </code>
+
+    <hr />
+
+     <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week8/MongoDBCount.html" target="_blank">View Source</a><br />
+    <a href="https://github.com/hpankithp/CS5610-aankit/tree/master/mongoDBExperiment" target="_blank">MongoDB Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="https://www.youtube.com/watch?v=YH5sFprHgl0" target="_blank">Prof. Jose Video Page</a>
+    <hr />
+    <hr />
+
+</body>
+</html>

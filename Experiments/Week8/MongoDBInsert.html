@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>This is MongoDB Insert Experiment</h1>    
+     
+    <p>
+        Description : MongoDB (from humongous) is one of many cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.
+    </p>
+
+    <p> Here in this experiment new records are added to the MongoDB using the save() menthod</p>
+    <p>Image Screenshot from the web.</p>   
+    
+    <img src="../Week8/MongoInsert.JPG"/>
+    
+    <hr />    
+    <p> Code Snippet :</p>
+
+    <code>
+        var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/trial_data');
+var express = require('express');
+var app = express();
+
+var DeveloperSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,    
+}, { collection: "form_final" });
+var form_final = mongoose.model("form_final", DeveloperSchema);
+var developer1 = new form_final({ firstName: "Ankit", lastName: "Agrawal" });
+var developer2 = new form_final({ firstName: "Rajnikant", lastName: "Kant" });
+var developer3 = new form_final({ firstName: "Abhishek", lastName: "Nirmal" });
+developer1.save();// To save it locally on the db
+developer2.save();
+developer3.save();
+app.get('/form_final', function (req, res) {
+    form_final.find(function (err, data) {
+        res.json(data);
+    });
+});
+app.listen(3000);
+
+
+    </code>
+
+    <hr />
+
+     <h3>Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week8/MongoDBInsert.html" target="_blank">View Source</a><br />
+    <a href="https://github.com/hpankithp/CS5610-aankit/tree/master/mongoDBExperiment" target="_blank">MongoDB Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="https://www.youtube.com/watch?v=YH5sFprHgl0" target="_blank">Prof. Jose Video Page</a>
+    <hr />
+
+</body>
+</html>
