@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+     <script type="text/javascript" src="AjaxCallActor.js"></script>
+     <link rel="stylesheet" type="text/css" href="movies.css" />
+</head>
+<body>
+
+    <h3>
+      Description : Here in this experiment I have demonstrated the use of Ajax call for my Project to get Actors data.
+    </h3>
+
+     <div id="movies"> 
+          
+     </div>
+
+    <p> Code Snippet :</p>
+    <code>
+       (function () {
+
+
+    $(document).ready(function () {
+        var limit = 10;
+        var MovieURL = "https://api.themoviedb.org/3/person/popular?api_key=854cdb7181f4686d285c7fb0d13802c1";
+
+        var movieSettings = {
+            url: MovieURL,
+            success: displayMovieInfo,
+            
+            dataType: "JSONP",
+            cache: false
+        };
+
+        $.ajax(movieSettings);
+
+        /* This is the success function which parses the JSON Data to generate HTML Code for each TV Show to displayed on the screen */
+        function displayMovieInfo(data) {
+
+            $.each(data.results, function (index, value) {
+
+                var imgSrc = value.profile_path == null ? "./images/not_available_icon.jpg" : "http://image.tmdb.org/t/p/w500/" + value.profile_path;
+                var actorName = value.name == null ? "Name not available" : value.name;
+                if (limit > 0) {
+                    $("#movies").append("< div class='col-md-3'>< img src =" + imgSrc + ">< p>< a href='actor.aspx?id=" + value.id + "' target='_blank'>" + actorName + "</a></p></div>");
+                    limit--;
+                }});
+
+        }
+    })
+
+
+
+})();
+
+    </code>
+
+    <hr />
+    <h3>HTML Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week10/AjaxCallActor.html" target="_blank">View Source</a>    
+    <hr />
+    <h3>Java Scipt Sourece</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week10/AjaxCallActor.js" target="_blank">View JS Source</a>
+    <hr />
+    <h3>CSS Sourece</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/Week10/movies.css" target="_blank">View CSS Source</a>
+    <hr />
+    <h3>Refrences</h3>
+    <a href="http://getbootstrap.com/css/" target="_blank">BootStrap</a>
+    <hr />
+
+</body>
+</html>
