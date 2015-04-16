@@ -1,0 +1,36 @@
+﻿body {
+}
+
+
+#wikiText
+{
+    width:70%;
+    margin-bottom:30px;
+}
+
+#buildInformation img
+{
+     
+    width: 280px;
+    height: 350px;
+    padding-right:20PX;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
+#inline{
+    display: inline-block;
+    padding : 5px;
+}
+
+
+#movies 
+{
+    width: 70%;
+    
+}
+
+table a{
+    color:black;
+    text-decoration:underline;
+}

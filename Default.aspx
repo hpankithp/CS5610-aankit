@@ -1,159 +1,112 @@
 ﻿<%@ Page Language="C#" %>
 
-<script runat="server">
-    <%-- This demo page has no server side script --%>
+<script runat="server">  
 </script>
-
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset='utf-8' />
-
-<title>Ankit's Home Page</title>
-
-<style type="text/css">
-    ul.master_navigation
-    {
-        font-size: 100%;
-        font-weight: bold;
-        text-align: center;
-        list-style: none;
-        margin: 0.5em 0;
-        padding: 0;
-    }
-
-    ul.master_navigation li
-    {
-        display: inline-block;
-        padding: 0 0.5%;
-    }
-
-    a
-    {
-        color: #08f;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    a:visited
-    {
-        color: #88f;
-    }
-
-    a:hover
-    {
-        color: #f00;
-    }
-
-    p
-    {
-        text-align: justify;
-    }
-</style>
-
-<style type="text/css" media="screen">
-    body {
-        width:900px;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .pad {
-        padding: 10px;
-    }
-</style>
-
+    <meta charset='utf-8' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="defaultPage.css" />
+    <title>Ankit's Home Page</title>
 </head>
-
 <body>
-
-<div class="pad">
-
-<form id="form1" runat="server">
-
-<div>
-
-<ul class="master_navigation">
-    <li><a href="sitestatistics/" target="_blank">SiteStatistics</a></li>
-    <li><a href="statistics/" target="_blank">Statistics</a></li>
-    <li><a href="source/" target="_blank">Source</a></li>
-    <li><a href="search/" target="_blank">Search</a></li>
-    <li><a href="searchtree/" target="_blank">SearchTree</a></li>
-    <li><a href="textview/" target="_blank">TextView</a></li>
-    <li><a href="filelist.aspx" target="_blank">FileList</a></li>
-    <li><a href="autofile.aspx" target="_blank">AutoFile</a></li>
-    <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
-    <li><a href="blog/" target="_blank">Blog</a></li>
-    <li><a href="story/index.htm?../Experiments/story.txt" >Experiments</a></li>
-    <li><a href="https://github.com/hpankithp" >GitHub</a></li>
-</ul>
-
-<hr />
-    <div >
-<img src="Experiments/Images/Ankit.jpg" height="310" width="280">
-        
-<h1>Ankit Agrawal</h1>
+    <div class="pading">
+        <form id="form1" runat="server">
+            <h1>Ankit Agrawal</h1>
+            <div>
+                <ul class="main_nav">
+                    <li><a href="sitestatistics/" target="_blank">SiteStatistics</a></li>
+                    <li><a href="statistics/" target="_blank">Statistics</a></li>
+                    <li><a href="source/" target="_blank">Source</a></li>
+                    <li><a href="search/" target="_blank">Search</a></li>
+                    <li><a href="searchtree/" target="_blank">SearchTree</a></li>
+                    <li><a href="textview/" target="_blank">TextView</a></li>
+                    <li><a href="filelist.aspx" target="_blank">FileList</a></li>
+                    <li><a href="autofile.aspx" target="_blank">AutoFile</a></li>
+                    <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
+                    <li><a href="blog/" target="_blank">Blog</a></li>                   
+                </ul>
+                <div id="mainContainer" class="cont">
+                    <div class="profilePic">
+                        <img src="Project/Images/ProfilePic2.JPG" height="300" width="280">                      
+                    </div>
+                    <div>
+                        <p>
+                            I am a graduate student doing masters in Computer Science at Northeastern University.
+                                This website is being developed for
+    CS 5610 Web Development Course under the guidance of                               
+                                Jose Annunziato. Grabbing the opportunity offered by the Web Development course I am                            
+                                developing this website.
+                                Apart from the Web Development course, I have taken the course like Hadoop (Map Reduce) , Information Retrieval, Introduction to Databasese and Program Design Paradigms.
+                                In this course I got deep learning about jQuery, CSS and box-model, HTML 5, Angular JS,Node JS and MongoDB.
+                            This Page has been made responsive without using BootStrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="subLinks">
+        <div class="firstCol">
+            <a href="Project/Home.aspx">
+                <div class="imgDivLnk">
+                    <img class="imgActual" src="Project/Images/Obolon_project.gif">
+                    <h3>Project</h3>
+                </div>
+            </a>
         </div>
-<p>
-    I am a graduate student doing masters in Computer Science at Northeastern University.This website is being developed for
-    CS 5610 Web Development Course under the guidance of Jose Annunziato. Grabbing the opportunity offered by the Web Development course I am developing this website.
-    I am eager to learn and use MEAN Stack for the project.
-    
-</p>
-
-<hr />
-
-<%--<p>
-    The home page may show some interesting content but its main
-    purpose should be to <i>provide navigation</i> to other pages
-    on your site.
-</p>--%>
-
-
-
-<%--<p>
-    It would be helpful if your home page shows your name and a
-    photo of yourself.  This will help us to get to know you. 
-</p>--%>
-    
-
-
-<%--<p>
-Here is a link to the
-<a href="story/index.htm" target="_blank">Story Utility</a>
-on this site so that you may explore this tool.
-</p>
-
-<p>
-Here is a link to the
-<a href="http://www.northeastern.edu/rasala/webstories.htm"
-        target="_blank">Web Development Stories</a>
-so that you may see a good collection of online documentation.
-</p>
-
-<p>
-This provides a model for using stories for documentation and
-for collections of experiments.
-</p>
-
-<hr />
-
-<p>
-None of the hints given above needs to be on your home page
-downstream but it is convenient to have them here at startup.
-</p>
-
-<hr />--%>
-
-</div>
-
-</form>
-
-</div>
-
+        <div class="secondCol">
+            <a href="story/index.htm?../Experiments/story.txt">
+                <div class="imgDivLnk">
+                    <img class="imgActual" src="Project/Images/Experiments.gif">
+                    <h3>Experiments</h3>
+                </div>
+            </a>
+        </div>
+        <div class="thirdCol">
+            <a href="https://github.com/hpankithp/CS5610-aankit">
+                <div class="imgDivLnk">
+                    <img class="imgActual" src="Project/Images/github.jpg">
+                    <h3>Github</h3>
+                </div>
+            </a>
+        </div>
+        <div class="fourthCol">
+            <a href="https://github.com/hpankithp/CS5610-aankit">
+                <div class="imgDivLnk">
+                    <img class="imgActual" src="Project/Images/documentation.jpg">
+                    <h3>Doucumentation</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <div class="contactMe">
+        <div class="time-pass">
+            <div class="column-arrange-1">
+                <a href="https://www.facebook.com/ankit.agrawal.3551380">
+                    <img src="Project/Images/facebook.jpg">
+                </a>
+            </div>
+            <div class="column-arrange-2">
+                <a href="https://plus.google.com/u/0/">
+                    <img src="Project/Images/GooglePlus.jpg"></a>
+            </div>
+            <div class="column-arrange-3">
+                <a href="mailto:agrawal.ank@husky.neu.edu">
+                    <img src="Project/Images/mail.png">
+                </a>
+            </div>
+            <div class="column-arrange-4">
+                <a href="https://www.linkedin.com/pub/ankit-agrawal/79/910/891">
+                    <img src="Project/Images/linkedin.png"></a>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="copyRight">Copyright © 2015, All Rights Reserved. Designed and Developed by Ankit Agrawal </div>
+    </div>
 </body>
 </html>

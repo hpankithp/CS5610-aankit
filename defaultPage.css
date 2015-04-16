@@ -1,0 +1,412 @@
+﻿html {
+    background-image: url(Project/Images/Grey-background-for-site11.jpg);
+}
+
+.subLinks {
+    margin: 40px 0;
+}
+
+
+.firstCol {
+    float: left;
+    width: 25%;
+}
+
+.secondCol {
+    float: left;
+    width: 25%;
+}
+
+.thirdCol {
+    float: left;
+    width: 25%;
+}
+
+.fourthCol {
+    float: left;
+    width: 25%;
+}
+
+.imgDivLnk {
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.imgActual {
+    border: 1px solid gray;
+    height: 80%;
+    width: 100%;
+}
+
+#mainContainer {   
+    left: 16px;
+    margin: 0 auto;   
+    padding: 10px;    
+}
+
+.profilePic {
+    width: 320px;
+    height: 300px;
+    float: left;
+    position: relative;
+}
+
+
+ul.main_nav {
+    font-family: Harrington;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;    
+    background-color: Gray;
+    overflow: hidden;    
+}
+
+    ul.main_nav li {
+        display: inline;
+    }
+
+    ul.main_nav a {
+        background-color: Gray;
+        color: White;
+        font-weight: bold;
+        text-decoration: none;
+        float: left;
+        padding: 10px 20px;
+    }
+
+        ul.main_nav a:hover {
+            background-color: #D6D0D0;
+        }
+
+p {
+    text-align: justify;
+    height: 280px;
+}
+
+.imgDivLnk {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.imgActual {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen {
+    body {
+        padding: 0;
+        height: 100%;        
+        font-family: 'Harrington';
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    a img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .column-arrange-1 {        
+        padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-2 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-3 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-4 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+
+    .imgDivLnk {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .imgActual {
+        height: 80%;
+        width: 100%;
+        border: 1px solid gray;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    body {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 100%;
+    }
+
+
+    .subLinks {
+        width: 1000px;
+    }
+
+    .firstCol {
+        float: left;
+        width: 25%;
+    }
+
+    .secondCol {
+        float: left;
+        width: 25%;
+    }
+
+    .thirdCol {
+        float: left;
+        width: 25%;
+    }
+
+    .fourthCol {
+        float: left;
+        width: 25%;
+    }
+
+    .column-arrange-1 {
+        /*float: left;*/
+        padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-2 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-3 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-4 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    #mainContainer{
+        height:500px;
+    }
+    .firstCol {
+        float: left;
+        width: 50%;
+    }
+
+    .secondCol {
+        float: left;
+        width: 50%;
+    }
+
+    .thirdCol {
+        float: left;
+        width: 50%;
+    }
+
+    .fourthCol {
+        float: left;
+        width: 50%;
+    }
+
+   .column-arrange-1 {
+        /*float: left;*/
+        padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-2 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-3 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+
+    .column-arrange-4 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 10%;
+         display: inline-block;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 480px) {
+    body {
+        max-width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #mainContainer{
+        height:650px;
+    }
+
+    .firstCol {
+        float: left;
+        width: 100%;
+    }
+
+    .secondCol {
+        float: left;
+        width: 100%;
+    }
+
+    .thirdCol {
+        float: left;
+        width: 100%;
+    }
+
+    .fourthCol {
+        float: left;
+        width: 100%;
+    }
+
+   .column-arrange-1 {
+        /*float: left;*/
+        padding-right: 40px;
+        width: 5%;
+         display: inline-block;
+    }
+
+    .column-arrange-2 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 5%;
+         display: inline-block;
+    }
+
+    .column-arrange-3 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 5%;
+         display: inline-block;
+    }
+
+    .column-arrange-4 {
+        /*float: left;*/
+         padding-right: 40px;
+        width: 5%;
+         display: inline-block;
+    }
+
+    h1 {
+        font-size: 26px;
+    }  
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.cont {
+    text-align: center;    
+    padding: 40px 65px 40px 65px;
+    border-radius: 8px;
+    line-height: 1.4;
+    clear: left;
+}
+
+
+.contactMe {
+    text-align: center;
+    height: 70px;
+}
+
+.time-pass{
+    display: inline-block;
+}
+
+#footer {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.subLinks {
+    margin: 40px 0;
+}
+ 
+
+.copyRight {
+    margin-top: 10px;
+}
+
+.imgDivLnk {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+.imgActual {
+    height: 80%;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+@media (min-width: 1px) and (max-width: 380px) {
+    #mainContainer{
+        height:800px;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 320px) {
+    .profilePic img {
+        width: 220px;
+    }
+    .cont{
+        text-align:left;
+    }
+}

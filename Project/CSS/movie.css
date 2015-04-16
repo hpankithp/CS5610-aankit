@@ -1,0 +1,27 @@
+﻿
+
+#moviesData div
+{
+    display : inline-block;
+    padding: 0px;
+    position:relative;
+    bottom:0px;
+    left:16px;
+    width:20%;
+    
+}
+
+#moviesData div img
+{
+    width: 70%;
+    height: 70%;
+    margin-bottom:10px;
+    padding: 5px 5px 5px 5px;
+}
+
+#moviesData
+{
+    width:100.5%;
+    background-color:white;
+}
+
