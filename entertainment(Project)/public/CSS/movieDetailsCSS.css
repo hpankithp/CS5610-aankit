@@ -1,0 +1,54 @@
+﻿body {
+}
+
+
+#overview {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+
+#movieInformation img
+{     
+    width: 280px;
+    height: 350px;
+    padding-right:20PX;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:10px;        
+}
+
+#cast img 
+{
+    width: 110px;
+    height: 130px;
+    padding-bottom:2px;    
+    right: 5px;
+    position:relative;
+    
+}
+
+p a{
+    color:black;
+    font-weight:bolder;
+    font-family:Calibri;
+}
+
+
+#cast 
+{
+    width: 70%;
+    
+}
+
+#cast td
+{
+    padding:2px 0px 0px 0px ;
+    vertical-align: middle;
+    
+} 
+
+table a{
+    color:black;
+    text-decoration:underline;
+}

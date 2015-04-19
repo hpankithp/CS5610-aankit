@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />   
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+     <link rel="stylesheet" type="text/css" href="CSS/master.css" />
+    <script type="text/javascript">
+
+        function onKeyEventFunc(event) {
+            if (event.which == 13 || event.keyCode == 13) {
+                var qry = document.getElementById('search').value;
+                window.open("http://entertainment-ankitagrawal.rhcloud.com/searchPage.html?qry=" + qry);
+                return true
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div id="container" class="container nav-bar-css navbar">
+        <div id="header">
+            <br />
+            <h1 id="siteName">Entertainment Space
+            </h1>
+            <div id="movieImage">
+                <img src="Images/Movies.jpg" alt="No image Found" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+        <form class="navbar-form navbar-left" role="search">           
+              </form>
+                </div>
+            </div>  
+        <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-menubuilder">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+    </div>
+
+      <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul id="modifyUL" class="nav navbar-nav">
+              <li class="active"> <a href="index.html" id="homebtn">Home</a></li>
+                <li> <a href="movies.html">Movies</a></li>
+                <li><a href="tvShows.html">TV Shows</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>                
+              </ul>
+          <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                   <input type="text" class="form-control" id="search" onkeypress="onKeyEventFunc(event)" placeholder="Search an actor""/>
+                   </div>
+              </form>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+</nav>
+
+
+    <link href="CSS/actorDetails.css" rel="stylesheet" type="text/css" />
+    <div id="mainActor" class="container">
+        <div id="buildInformation">             
+            <div id="profileImage"></div>
+            <div id ="inline">
+            <div id="bday"> <b>Birthday : </b></div>
+            <div id="birthPlace"><b>Birth Place : </b></div>
+            <div id="popularity"><b>Popularaity : </b></div>  
+            <div id="homepage"><b>Homepage : </b></div> 
+                </div>
+      </div>
+        <div id="wikiActor">
+            <h3 id="name"></h3> 
+            <div id="wikiText"></div>
+            <h3 class="hrHeading">Movies</h3>
+            
+       <div id="movies">           
+          <table class="table table-bordered">
+                <tr>                     
+                </tr>
+           </table>
+       </div>
+     </div>
+    </div>    
+     <script type="text/javascript" src="JS/URLParam.js"></script>
+     <script type="text/javascript" src="JS/actorDetails.js"></script>
+         <script type="text/javascript" src="JS/loginJS.js"></script>
+    <div id="footer">
+            <p>Copyright © 2015, All Rights Reserved. Designed and Developed by Ankit Agrawal </p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+﻿body {
+}
+
+.welcome{
+    text-align:center;
+}
+
+img{
+    width:100px;
+    height:100px;
+}
+
+.fleft{
+    float: left;  
+  overflow: hidden;
+}
+
+fright{
+    overflow: hidden;
+}
+
+.testing{
+    font-weight:bolder;
+    font-family:Harrington;
+    font-size: 20px;
+    opacity:.7;
+}

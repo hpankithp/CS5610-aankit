@@ -1,0 +1,17 @@
+﻿body {
+    background-color:lightgoldenrodyellow;
+    font-family: Verdana;
+}
+
+.matter{
+    width:70%;
+}
+
+h2{
+    text-align:center;
+}
+
+img {    
+    width:650px;
+    height:550px;
+}

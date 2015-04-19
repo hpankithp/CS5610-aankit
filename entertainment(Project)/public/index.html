@@ -1,0 +1,139 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />   
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+     <link rel="stylesheet" type="text/css" href="CSS/master.css" />
+    <script>
+        $(document).ready(function () {
+            var a = window.location.search.substring(5);
+            //console.log(a);
+            if (a == 'trueVal') {
+                $("#loginbtn").hide();
+                $("#profilebtn").show();                
+               // $("#contact_id").hide();
+               // $("#bookmarkTiming").show();
+            }
+            else {
+                var user = localStorage.getItem('currentUser');
+                user = JSON.parse(user);
+                //console.log(user);
+                $("#profilebtn").hide();
+                $("#loginbtn").show();
+            }
+        });
+    </script>
+
+   
+</head>
+<body>
+    <div id="container" class="container nav-bar-css navbar">
+        <div id="header">
+            <br />
+            <h1 id="siteName">Entertainment Space
+            </h1>
+            <div id="movieImage">
+                <img src="Images/Movies.jpg" alt="No image Found" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+        <form class="navbar-form navbar-left" role="search">           
+              </form>
+                </div>
+            </div>  
+        <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-menubuilder">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+    </div>
+
+      <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul id="modifyUL" class="nav navbar-nav">
+              <li class="active"> <a href="index.html" id="homebtn">Home</a></li>
+                <li> <a href="movies.html">Movies</a></li>
+                <li><a href="tvShows.html">TV Shows</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+              <li><a href="Login.html" id="loginbtn">Login</a></li>
+              <li><a href="profile.html" id="profilebtn">Profile</a></li>                
+              </ul>
+          <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                   <input type="text" class="form-control" id="search" onkeypress="onKeyEventFunc(event)" placeholder="Search an actor""/>
+                   </div>
+              </form>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+</nav>
+    <link href="CSS/home.css" rel="stylesheet" type="text/css" />
+    
+     <div id="content-wrap" >  
+
+    <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>                                
+            </ol>
+            <div class="carousel-inner timepass" role="listbox">                          
+            </div>
+         
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+         </div>
+         
+        <h3 class="popActors">Popular Actors</h3>
+        <hr id="homeHR"/>         
+             <div class="row">
+        <div id ="topActors"> </div> 
+             </div>         
+        <script type="text/javascript" src="JS/home.js"></script>
+         <script type="text/javascript" src="JS/loginJS.js"></script>
+     </div>
+
+
+           <div id="footer">
+            <p>Copyright © 2015, All Rights Reserved. Designed and Developed by Ankit Agrawal </p>
+        </div>
+    </div>
+</body>
+     <script type="text/javascript">
+
+         function onKeyEventFunc(event) {
+             if (event.which == 13 || event.keyCode == 13) {
+                 var qry = document.getElementById('search').value;
+                 window.open("http://entertainment-ankitagrawal.rhcloud.com/searchPage.html?qry=" + qry);
+                 return true
+             }
+             return false;
+         }
+    </script>
+</html>

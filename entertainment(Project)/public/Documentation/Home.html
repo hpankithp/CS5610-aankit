@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Home Page</title>     
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />   
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+     <link rel="stylesheet" type="text/css" href="DocStyleSheet.css" />
+</head>
+<body>
+    <div class="container matter">
+        <h2> Home Page Description :</h2> <br />
+        
+        <p><b><u>Summary of the Page </u></b>: This is the homepage of the project. The .js file linked to this page makes an Ajax call to themoviedatabase API. The Ajax call is made to get the list of 20 most popular actors. Each JSON Object contains information about the actor such as the profile image ,id  and other attributes about the actor. Id of the actor is passed as a query parameter to actorDetails.aspx. This displays the additional infomation about the actor. There is a separate JSON call to populate the carousel. Images are appended to a div tag and corresponding required carousel tags hence they are downloaded from API only once. Also the header contains all the tabs and footer contains the copyright information</p>
+        <p> Screenshot of the Page :</p>    
+        <img src="screenshot/home1.JPG" />   
+        <hr />
+        <img src="screenshot/home2.JPG" />             
+    </div>
+    <hr />
+   
+</body>
+</html>
