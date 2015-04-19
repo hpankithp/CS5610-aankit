@@ -49,7 +49,7 @@
     </div>
     <div class="subLinks">
         <div class="firstCol">
-            <a href="Project/Home.aspx">
+            <a href="http://entertainment-ankitagrawal.rhcloud.com/">
                 <div class="imgDivLnk">
                     <img class="imgActual" src="Project/Images/Obolon_project.gif">
                     <h3>Project</h3>
@@ -73,7 +73,7 @@
             </a>
         </div>
         <div class="fourthCol">
-            <a href="https://github.com/hpankithp/CS5610-aankit">
+            <a href="story/index.htm?../Project/story.txt">
                 <div class="imgDivLnk">
                     <img class="imgActual" src="Project/Images/documentation.jpg">
                     <h3>Doucumentation</h3>
